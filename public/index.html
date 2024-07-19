@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keep Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Main Content -->
+    <div id="main">
+      <div id="menu">
+        <button onclick="showCreateNote()">Create a new note</button>
+        <button onclick="showNotes()">View Notes</button>
+        <button onclick="showArchivedNotes()">Archived Notes</button>
+        <button onclick="showTrashedNotes()">Trashed Notes</button>
+        <button onclick="showLabels()">Labels</button>
+        <input type="text" id="search" placeholder="Search notes...">
+      </div>
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <!-- Note Creation Modal -->
+  <div id="note-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCreateNote()">&times;</span>
+      <h2>Create Note</h2>
+      <input type="text" id="note-title" placeholder="Title">
+      <textarea id="note-content" placeholder="Content"></textarea>
+      <input type="text" id="note-tags" placeholder="Tags (comma-separated)">
+      <button onclick="createNote()">Save Note</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
